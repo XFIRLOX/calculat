@@ -1,0 +1,503 @@
+@import url("https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css");
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background-color: rgb(240, 243, 243);
+  }
+  
+  @font-face {
+    font-family: "Nexa";
+    src: url("/nexa/Nexa-Heavy.ttf") format("truetype");
+    /* You can add other font formats like .woff or .otf as needed */
+}
+
+@media screen and (max-width: 768px) {
+  body {
+    font-size: 14px;
+  }
+}
+
+
+  .header {
+    height: 60px;
+    box-sizing: border-box;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-radius: 15px;
+    padding: 10px 20px;
+    background-color: #fff;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    margin: 20px;
+    position: relative;
+  }
+  
+  .logo {
+    display: flex;
+    align-items: center;
+  }
+  
+  .logo-icon {
+    font-size: 24px;
+    margin-right: 8px;
+  }
+  
+  .logo-text {
+    font-size: 18px;
+    font-weight: bold;
+    color: #333;
+  }
+  
+  .nav1 {
+    display: flex;
+    border-radius: 20px;
+    gap: 20px;
+    font-family: "Twemoji Country Flags",'__poppinsFont_0acb6d',Verdana,sans-serif;
+    font-size: 15px;
+    font-weight: 600;
+    line-height: 114%;
+    letter-spacing: 0;
+    margin: 0;
+    box-sizing: inherit;
+  }
+
+  .nav1 {
+    margin: 0;
+    font: inherit;
+    color: #BE05C1;
+    -webkit-text-decoration: underline;
+    text-decoration: underline;
+    text-decoration-color: rgba(190, 5, 193, 0.4);
+    -webkit-text-decoration: none;
+    text-decoration: none;
+    min-height: 32px;
+    display: flex;
+    -webkit-align-items: center;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    -webkit-justify-content: center;
+    justify-content: center;
+    padding: 0px 8px;
+    gap: 20px;
+    border-radius: 8px;
+    cursor: pointer;
+    position: relative;
+    background: #FFFFFF;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    white-space: nowrap;
+  }
+  
+  .nav-link {
+    text-decoration: none;
+  font-size: 16px;
+  color: #bbb; 
+  padding: 8px 15px;
+  border-radius: 10px;
+  border: 2px solid transparent;
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  }
+
+  .nav-link.active {
+    color: #007bff;
+  border: 2px solid #007bff;
+  background-color: transparent;
+  }
+  
+  .nav-link:hover {
+    color: #fff;
+  }
+  
+  .nav-link:hover,
+.nav-link:focus {
+    color: #007bff;
+    border: 2px solid #007bff;
+    background-color: transparent;
+}
+
+.nav-link i {
+    font-size: 18px;
+    color: inherit;
+  }
+
+  .nav-link:hover i,
+.nav-link.active i {
+  color: #007bff;
+}
+
+@media screen and (max-width: 768px) {
+  .container {
+    flex-direction: column-reverse;
+    width: 100%; /* Susunan vertikal */ /* Pusatkan kontainer */
+  }
+
+  .header {
+    width: 100%;
+  }
+
+  .left-sidebar {
+    width: 100%; /* Lebar penuh di layar kecil */
+    margin-bottom: 20px; /* Spasi antara sidebar dan calculator */
+  }
+
+  .right-container {
+    width: 100%; /* Lebar penuh */
+    margin: 0 auto; /* Pusatkan */
+  }
+
+  .calculator, .calculator2 {
+    width: 100%; /* Pastikan form calculator memenuhi layar */
+    padding: 15px;
+     /* Spasi agar lebih nyaman */
+  }
+
+  .head, .head2 {
+    width: 100%; /* Lebar penuh */
+  }
+
+  .info1 {
+    margin-top: 30px; /* Kurangi jarak untuk layar kecil */
+  }
+}
+
+.container {
+    display: flex;
+    align-items: flex-start;
+    flex-wrap: wrap;
+    padding: 20px;
+    gap: 20px;
+  }
+
+  .left-sidebar {
+    width: 460px;
+    border-radius: 10px;
+    padding: 15px;
+    flex-wrap: wrap;
+  }
+
+  left-sidebar .info p {
+    font-size: 14px;
+    color: #555;
+    margin: 10px 0;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+  }
+
+  .left-sidebar .info p i {
+    font-size: 16px;
+    color: #007bff;
+  }
+
+  h1 {
+    font-size: 35px;
+    font-family: "Nexa", sans-serif;
+  }
+
+  .right-container {
+    width: 500px;  
+    border-radius: 15px;
+    background-color: #f9f9f9;
+    padding: 10px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    box-sizing: border-box;
+}
+
+.calculator {
+    background-color: rgb(240, 243, 243);
+    padding: 20px;
+    border-radius: 10px;
+}
+
+.h11 {
+    color: #0068EDff;
+}
+
+.calculator, .calculator2 {
+    background-color: rgb(240, 243, 243);
+    padding: 20px;
+    border-radius: 10px;
+    display: none;
+    margin-bottom: 20px;
+    box-sizing: border-box; /* Pastikan padding dan border dihitung dalam lebar */
+    margin: 0;
+  }
+
+  .calculator2 {
+    background-color: rgb(240, 243, 243);
+    padding: 20px;
+    border-radius: 10px;
+    display: none;  /* Default to hidden */
+}
+  
+.head, .head2 {
+    background-color: rgb(240, 243, 243);
+    border-radius: 10px;
+    padding: 15px;
+    color: #414141;
+    margin-bottom: 10px;
+    display: inline-flex;
+    justify-content: space-between;
+    align-items: center;
+    width: calc(100% - 30px);
+}
+
+.head2 {
+  margin-top: 17px;
+}
+
+.head-text {
+    font-size: 18px;
+    margin: 0;
+    flex-grow: 1; /* Menghilangkan margin pada teks */
+}
+  
+  .calculator form, .calculator2 form {
+    margin-bottom: 20px;
+  }
+  
+  .calculator input, .calculator2 input{
+    padding: 8px;
+    font-size: 16px;
+    margin-right: 10px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+  }
+  
+  .calculator button, .calculator2 button {
+    padding: 8px 15px;
+    font-size: 16px;
+    background-color: #0068ED;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  
+  
+  .calculator button:hover, .calculator2 button:hover {
+    background-color: #005bb5;
+  }
+  
+  #results p {
+    font-size: 18px;
+    margin: 10px 0;
+  }
+
+  .btn-toggle {
+    padding: 8px 15px;
+    font-size: 18px;
+    border: 2px solid #0068EDff; /* Tambahkan border dengan warna */
+    border-radius: 50%;
+    cursor: pointer;
+    margin-right: 10px;
+    display: flex;
+    height: 35px; /* Tentukan tinggi tombol */
+    width: 35px;
+    justify-content: center; /* Memusatkan ikon */
+    align-items: center;
+    -webkit-transition: 0.5s;
+    transition: 0.5s;
+    -webkit-transform: rotate(0deg);
+    -moz-transform: rotate(0deg);
+    -ms-transform: a;
+    transform: rotate(0deg); /* Transisi halus */
+    color: #0068EDff; /* Warna ikon default */
+    background-color: white;
+  }
+  
+  .btn-toggle:hover { /* Change background color on hover */
+    box-shadow: 0 3px 4px rgba(0, 0, 0, 0.1); /* Button text color */
+  }
+
+  .rotate-icon {
+    transform: rotate(180deg); /* Rotate 180 degrees */
+    transition: transform 0.3s ease; /* Smooth transition for rotation */
+}
+
+.calculator-hidden, .calculator2-hidden {
+    display: none;
+}
+
+.calculator.show, .calculator2.show {
+  display: block; /* Tampilkan saat toggle */
+}
+
+  .btn-toggle i {
+    color: #0068EDff; /* Warna ikon default */
+    transition: transform 0.3s ease, color 0.3s ease;
+}
+
+  .btn-toggle.active i {
+    color: white; /* Ikon menjadi putih */
+}
+
+.btn-toggle.active { /* Ikon menjadi putih */
+    border-color: #0068EDff; /* Border menjadi ungu */
+    background-color: #0068EDff; /* Latar belakang menjadi ungu */
+}
+
+.bi-chevron-up {
+    transform: rotate(180deg);
+    transition: transform 0.3s ease-in-out;
+}
+
+/* Ikon akan berputar 180 derajat ketika calculator tersembunyi */
+.bi-chevron-down {
+    transform: rotate(-180deg);
+    transition: transform 0.3s ease-in-out;
+}
+
+.btn-toggle.active .bi-chevron-down {
+    color: white;
+    background-color: #0068EDff; /* Blue background for the icon */
+    transition: background-color 0.3s, color 0.3s;
+}
+
+input[type="number"]::-webkit-outer-spin-button,
+input[type="number"]::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+input[type="number"] {
+  -moz-appearance: textfield;
+}
+
+.calculator input[type="number"], .calculator2 input[type="number"] {
+    padding: 8px;
+    font-size: 16px;
+    margin-right: 10px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    outline: 2px solid rgb(146, 184, 233);
+    transition: outline-color 0.3s ease;
+  }
+  
+  .calculator input[type="number"]:focus, .calculator2 input[type="number"]:focus {
+    outline: 2.5px solid #0068EDff; /* Blue outline on focus */
+  }
+
+  /* Night Mode */
+body.night-mode {
+    background-color: rgb(18 18 18);
+    color: #ffffff;
+}
+
+body.night-mode .navbar {
+    background-color: #333;
+}
+
+body.night-mode {
+    background-color: rgb(18 18 18 0.5);
+    color: #ffffff;
+}
+
+body.night-mode .header {
+    background-color: #fff1;
+}
+
+body.night-mode .logo-text {
+    color: rgb(243 243 243);
+}
+
+body.night-mode .right-container {
+    background-color: #fff1;
+}
+
+body.night-mode .head, body.night-mode .head2 {
+    background-color: rgb(18 18 18);
+    color: #ffffff;
+}
+
+body.night-mode .nav1 {
+    background-color: #fff1;
+}
+
+body.night-mode .calculator, body.night-mode .calculator2 {
+    background-color: rgb(18 18 18);
+}
+
+.mode-toggle {
+    background-color: transparent;
+    color: rgb(168, 168, 168);
+    border: transparent;
+    padding: 10px; /* Tentukan padding yang konsisten */
+    border-radius: 5px;
+    transition: background-color 0.3s; /* Hanya ubah background-color dengan transisi halus */
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    height: 35px; /* Tentukan tinggi tombol tetap */
+    width: 35px; /* Tentukan lebar tombol tetap */
+}
+
+.mode-toggle:hover {
+    background-color: rgb(153 153 153 / var(--tw-text-opacity));
+    color: rgb(168, 168, 168); /* Ubah hanya warna latar belakang */
+    box-shadow: 0 3px 4px rgba(0, 0, 0, 0.1); /* Efek bayangan saat hover */
+}
+
+.mode-toggle, .mode-toggle:hover {
+    display: inline-flex; /* Menjaga tombol tetap dalam posisi inline-flex */
+    justify-content: center; /* Pastikan konten tetap terpusat */
+    align-items: center; /* Menjaga ikon tetap terpusat */
+}
+
+.info1 {
+    margin-top: 70px;
+}
+
+:root {
+    --tw-text-opacity: 0.1; /* Sesuaikan dengan tingkat opasitas yang diinginkan */
+  }
+
+  .form-group {
+    margin-bottom: 15px;
+  }
+  
+  .form-group label {
+    display: block;
+    font-weight: bold;
+    margin-bottom: 5px;
+  }
+
+  .error-message {
+    color: red;
+    font-style: italic;
+    margin-top: 5px;
+    font-size: 14px; /* Hidden by default */
+}
+
+body.night-mode .mode-toggle {
+  background-color: transparent;
+  color: rgb(168, 168, 168);
+  border: transparent;
+  padding: 10px; /* Tentukan padding yang konsisten */
+  border-radius: 5px;
+  transition: background-color 0.3s; /* Hanya ubah background-color dengan transisi halus */
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  height: 35px; /* Tentukan tinggi tombol tetap */
+  width: 35px; /* Tentukan lebar tombol tetap */
+}
+
+body.night-mode .mode-toggle:hover {
+  background-color: rgb(153 153 153 / var(--tw-text-opacity));
+  color: rgb(168, 168, 168); /* Ubah hanya warna latar belakang */
+  box-shadow: 0 3px 4px rgba(0, 0, 0, 0.1); /* Efek bayangan saat hover */
+}
+
+body.night-mode .mode-toggle, .mode-toggle:hover {
+  display: inline-flex; /* Menjaga tombol tetap dalam posisi inline-flex */
+  justify-content: center; /* Pastikan konten tetap terpusat */
+  align-items: center; /* Menjaga ikon tetap terpusat */
+}

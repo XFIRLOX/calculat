@@ -1,0 +1,339 @@
+@font-face {
+    font-family: "Nexa";
+    src: url("/nexa/Nexa-Heavy.ttf");
+    /* You can add other font formats like .woff or .otf as needed */
+}
+
+@media screen and (max-width: 768px) {
+    body {
+      font-size: 14px;
+    }
+  }
+
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background-color: rgb(18 18 18 0.5);
+    padding: 0;
+}
+
+.header {
+    height: 60px;
+    box-sizing: border-box;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-radius: 15px;
+    padding: 10px 20px;
+    background-color: #fff;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    margin: 20px;
+    position: relative;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+}
+
+.logo-icon {
+    font-size: 24px;
+    margin-right: 8px;
+}
+
+.logo-text {
+    font-size: 18px;
+    font-weight: bold;
+    color: #333;
+}
+
+.nav1 {
+    display: flex;
+    border-radius: 20px;
+    gap: 20px;
+    font-family: "Twemoji Country Flags",'__poppinsFont_0acb6d',Verdana,sans-serif;
+    font-size: 15px;
+    font-weight: 600;
+    line-height: 114%;
+    letter-spacing: 0;
+    margin: 0;
+    box-sizing: inherit;
+}
+
+.nav1 {
+    margin: 0;
+    font: inherit;
+    color: #BE05C1;
+    -webkit-text-decoration: underline;
+    text-decoration: underline;
+    text-decoration-color: rgba(190, 5, 193, 0.4);
+    -webkit-text-decoration: none;
+    text-decoration: none;
+    min-height: 32px;
+    display: flex;
+    -webkit-align-items: center;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    -webkit-justify-content: center;
+    justify-content: center;
+    padding: 0px 8px;
+    gap: 20px;
+    border-radius: 8px;
+    cursor: pointer;
+    position: relative;
+    background: #FFFFFF;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    white-space: nowrap;
+}
+
+.nav-link {
+    text-decoration: none;
+    font-size: 16px;
+    color: #bbb;
+    padding: 8px 15px;
+    border-radius: 10px;
+    border: 2px solid transparent;
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+
+.nav-link.active {
+    color: #007bff;
+    border: 2px solid #007bff;
+    background-color: transparent;
+}
+
+.nav-link:hover {
+    color: #fff;
+}
+
+.nav-link:hover,
+.nav-link:focus {
+    color: #007bff;
+    border: 2px solid #007bff;
+    background-color: transparent;
+}
+
+.nav-link i {
+    font-size: 18px;
+    color: inherit;
+}
+
+.nav-link:hover i,
+.nav-link.active i {
+    color: #007bff;
+}
+
+.container {
+    max-width: 800px;
+    margin-right: 70px;
+    margin-top: 60px;
+    margin-left: 207px;
+    padding: 20px;
+    text-align: left;
+}
+
+.container2 {
+    max-width: 800px;
+    margin-right: 70px;
+    margin-top: 50px;
+    margin-left: 207px;
+    padding: 20px;
+    text-align: left;
+}
+
+h1 {
+    font-size: 2.6em;
+    font-family: "Nexa", sans-serif;
+    margin-bottom: 60px;
+}
+
+.profile {
+    display: block;  /* Change this to block to stack the text */
+    gap: 10px;  /* Optional: space between each text line */
+    border-radius: 10px;
+}
+
+.description {
+    font-size: 1.1em;
+    line-height: 1.5;
+}
+
+.blue {
+    color: #0068EDff;
+}
+
+.span1 {
+    display: block;  /* Makes each span occupy a new line */
+    margin-bottom: 10px; /* Adds some space between the spans */
+  }
+
+  .span2 {
+    display: block;  /* Makes each span occupy a new line */
+    margin-bottom: 30px;
+    color: #757575;
+    font-size: 18px;
+    font-style: inherit; /* Adds some space between the spans */
+  }
+
+.x {
+    margin-top: 30px;
+}
+
+.mode-toggle {
+    background-color: transparent;
+    color: rgb(168, 168, 168);
+    border: transparent;
+    padding: 10px; /* Tentukan padding yang konsisten */
+    border-radius: 5px;
+    transition: background-color 0.3s; /* Hanya ubah background-color dengan transisi halus */
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    height: 35px; /* Tentukan tinggi tombol tetap */
+    width: 35px; /* Tentukan lebar tombol tetap */
+}
+
+.mode-toggle:hover {
+    background-color: rgb(153 153 153 / var(--tw-text-opacity));
+    color: rgb(168, 168, 168); /* Ubah hanya warna latar belakang */
+    box-shadow: 0 3px 4px rgba(0, 0, 0, 0.1); /* Efek bayangan saat hover */
+}
+
+.mode-toggle, .mode-toggle:hover {
+    display: inline-flex; /* Menjaga tombol tetap dalam posisi inline-flex */
+    justify-content: center; /* Pastikan konten tetap terpusat */
+    align-items: center; /* Menjaga ikon tetap terpusat */
+}
+
+  .value {
+    display: inline-block;
+    opacity: 0;
+    transform: translateY(-10px);
+    transition: opacity 0.3s ease, transform 0.3s ease;
+  }
+  
+  .value.hidden {
+    opacity: 0;
+    transform: translateY(-10px);
+    color: #007bff;
+    pointer-events: none; /* Prevent interaction when hidden */
+  }
+  
+  .value:not(.hidden) {
+    opacity: 1;
+    color: #007bff;
+    transform: translateY(0);
+  }
+
+  .toggle-btn {
+    margin-left: 10px;
+    cursor: pointer;
+    padding: 5px 15px;
+    background-color: transparent;
+    color: #007bff;
+    border: 2px solid #007bff;
+    border-radius: 5px;
+    gap: 10px;
+    display: inline-flex;
+    justify-content: space-between;
+    align-items: center;
+    transition: all 0.3s ease;
+  }
+  
+  /* Hover efek untuk tombol */
+  .toggle-btn:hover {
+    box-shadow: 0 5px 6px rgba(0, 0, 0, 0.1);
+  }
+  
+  /* Gaya tombol ketika dalam kondisi 'hide' */
+  .toggle-btn.hide {
+    background-color: #007bff;
+    color: #fff;
+    border: 2px solid #007bff;
+  }
+  
+  /* Ikon rotasi berdasarkan status */
+  .toggle-btn i {
+    margin-left: 5px;
+    transition: transform 0.3s ease, order 0.3s ease;
+    order: 1;
+  }
+  
+  .toggle-btn.show i {
+    transform: rotate(360deg); /* Rotasi kanan */
+  }
+  
+  .toggle-btn.hide i {
+    transform: rotate(180deg); /* Rotasi kiri */
+  }
+
+  /* CSS Mode Malam */
+body.dark-mode {
+    background-color: #121212;
+    color: #e0e0e0;
+}
+
+.header.dark-mode {
+    background-color: #1e1e1e;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.4);
+}
+
+.nav1.dark-mode {
+    background-color: transparent;
+}
+
+.nav-link.dark-mode {
+    color: #bbbbbb;
+}
+
+.nav-link.dark-mode.active,
+.nav-link.dark-mode:hover {
+    color: #4fc3f7;
+    border-color: #4fc3f7;
+}
+
+.nav-link.dark-mode i {
+    color: inherit;
+}
+
+.nav-link.dark-mode:hover i {
+    color: #4fc3f7;
+}
+
+.container.dark-mode,
+.container2.dark-mode {
+    border-radius: 8px;
+}
+
+.span1.dark-mode,
+.span2.dark-mode {
+    color: #bdbdbd;
+}
+
+.toggle-btn.dark-mode {
+    background-color: #1e1e1e;
+    color: #4fc3f7;
+    border-color: #4fc3f7;
+}
+
+.toggle-btn.dark-mode.hide {
+    background-color: #4fc3f7;
+    color: #1e1e1e;
+}
+
+.value.dark-mode {
+    color: #4fc3f7;
+}
+
+/* Untuk elemen lainnya, pastikan warna teks dan latar kontras */
+h1.dark-mode {
+    color: #ffffff;
+}

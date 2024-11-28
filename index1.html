@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Header Example</title>
+  <link rel="stylesheet" href="style1.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+  <style>
+    /* Hide .value spans by default */
+    .value.hidden {
+      display: none;
+    }
+  </style>
+</head>
+<body>
+  <header class="header">
+    <div class="logo">
+      <span class="logo-icon" ><img src="preview.png" width="45px"></span>
+      <span class="logo-text">About</span>
+    </div>
+    <nav class="nav1">
+      <button id="mode-toggle" class="mode-toggle"><i class="bi-brightness-high"></i></button>
+        <a href="index.html" class="nav-link" id="math-menu"><i class="bi bi-calculator"></i> Math</a>
+        <a href="#" class="nav-link" id="about -menu"><i class="bi bi-file-person"></i>About</a>
+    </nav>
+  </header>
+
+  <div class="container">
+    <h1>About me<span class="blue">.</span>
+    </h1>
+    <div class="profile">
+        <span class="span1">Nama: Firlo Rifqi Gunawan</span>
+        <span class="span1">Kelas: XII RPL 3</span>
+        <span class="span1">NIS: 22230327</span>
+        <span class="span1">No. Absen: 11</span>
+    </div>
+</div>
+
+<div class="container2">
+  <h1>Penilaian<span class="blue">.</span>
+  </h1>
+  <div class="x">
+      <span class="span2">Kompetensi Sumatif Akhir Semester Ganjil Kelas X</span>
+      <span>Rata-rata Nilai </span><span class="value hidden"><b> 84.69</b></span>
+      <button class="toggle-btn"><span class="btn-text">Show</span><i class="bi bi-caret-right"></i></button>
+  </div>
+  <div class="x">
+    <span class="span2">Kompetensi Sumatif Akhir Semester Genap Kelas X</span>
+    <span>Rata-rata Nilai </span><span class="value hidden"><b> 86.75</b></span>
+    <button class="toggle-btn"><span class="btn-text">Show</span><i class="bi bi-caret-right"></i></button>
+</div>
+<div class="x">
+  <span class="span2">Kompetensi Sumatif Tengah Semester Ganjil Kelas XI</span>
+  <span>Rata-rata Nilai </span><span class="value hidden"><b> 83.80</b></span>
+  <button class="toggle-btn"><span class="btn-text">Show</span><i class="bi bi-caret-right"></i></button>
+</div>
+<div class="x">
+  <span class="span2">Kompetensi Sumatif Tengah Semester Genap Kelas XI</span>
+  <span>Rata-rata Nilai </span><span class="value hidden"><b> 85.20</b></span>
+  <button class="toggle-btn"><span class="btn-text">Show</span><i class="bi bi-caret-right"></i></button>
+</div>
+<div class="x">
+  <span class="span2">Kompetensi Sumatif Akhir Semester Genap Kelas XI</span>
+  <span>Rata-rata Nilai </span><span class="value hidden"><b> 86.90</b></span>
+  <button class="toggle-btn"><span class="btn-text">Show</span><i class="bi bi-caret-right"></i></button>
+</div>
+</div>
+
+<script>
+document.querySelectorAll('.toggle-btn').forEach(button => {
+  button.addEventListener('click', function () {
+    const valueSpan = this.previousElementSibling; // Mengambil elemen <span> sebelumnya
+    const btnText = this.querySelector('.btn-text'); // Mengambil elemen teks pada tombol
+    const icon = this.querySelector('i'); // Mengambil ikon
+
+    if (valueSpan.classList.contains('hidden')) {
+      valueSpan.classList.remove('hidden'); // Tampilkan nilai
+      btnText.textContent = 'Hide'; // Ubah teks tombol
+      this.classList.add('hide');
+      this.classList.remove('show');
+      icon.style.order = -1; // Pindahkan ikon ke kanan
+    } else {
+      valueSpan.classList.add('hidden'); // Sembunyikan nilai
+      btnText.textContent = 'Show'; // Ubah teks tombol kembali
+      this.classList.add('show');
+      this.classList.remove('hide');
+      icon.style.order = 2; // Pindahkan ikon ke kiri
+    }
+  });
+});
+
+// Tambahkan event listener ke tombol mode malam
+document.getElementById('mode-toggle').addEventListener('click', function () {
+    document.body.classList.toggle('dark-mode');
+    document.querySelectorAll('.header, .nav1, .container, .container2, .span1, .span2, .toggle-btn, .value, .nav-link, h1')
+        .forEach(el => el.classList.toggle('dark-mode'));
+
+    // Ubah ikon tombol
+    const icon = this.querySelector('i');
+    icon.classList.toggle('bi-brightness-high');
+    icon.classList.toggle('bi-moon');
+    
+});
+
+</script>
+</body>
+</html>
