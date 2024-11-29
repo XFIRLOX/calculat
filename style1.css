@@ -183,6 +183,15 @@ h1 {
     font-style: inherit; /* Adds some space between the spans */
   }
 
+  .span3 {
+    display: block;  /* Makes each span occupy a new line */
+    margin-bottom: 30px;
+    margin-top: 30px;
+    color: #757575;
+    font-size: 18px;
+    font-style: inherit; /* Adds some space between the spans */
+  }
+
 .x {
     margin-top: 30px;
 }
@@ -286,6 +295,8 @@ body.dark-mode {
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.4);
 }
 
+
+
 .nav1.dark-mode {
     background-color: transparent;
 }
@@ -314,7 +325,8 @@ body.dark-mode {
 }
 
 .span1.dark-mode,
-.span2.dark-mode {
+.span2.dark-mode,
+.span3.dark-mode {
     color: #bdbdbd;
 }
 
@@ -336,4 +348,78 @@ body.dark-mode {
 /* Untuk elemen lainnya, pastikan warna teks dan latar kontras */
 h1.dark-mode {
     color: #ffffff;
+}
+
+.degree-text {
+    font-size: 16px;
+    line-height: 1.5;
+    color: #333; /* Warna teks */
+  }
+
+  .educ {
+    display: flex;
+    align-items: center;
+    gap: 15px; /* Jarak antara gambar dan teks */
+  }
+
+  .deg {
+    font-size: 13px;
+    color: #acabab;
+    
+  }
+
+  .smk {
+    color: #0F3C33ff;
+    font-size: 20px;
+  }
+
+  .deg1{
+    font-size: 13px;
+    color: #acabab;
+    margin-left: 86px;
+    margin-bottom: 90px;
+  }
+
+  .teach{
+    margin-top: 30px;
+  }
+
+  .spd{
+    margin-left: 86px;
+    margin-top: 90px;
+  }
+
+  .rpl .dark-mode {
+    color: #ffffff;
+  }
+
+  .rpl {
+    color: #333; /* Warna default */
+}
+
+body.dark-mode .rpl {
+    color: #ffffff; /* Warna saat dark mode */
+}
+
+.logo-text.dark-mode {
+    color: #ffffff;
+}
+
+.logo-text {
+    color: #333;
+}
+
+body.dark-mode .logo-text {
+    color: #ffffff; /* Warna saat dark mode */
+}
+
+.logo-icon img {
+    transition: box-shadow 0.3s ease-in-out, transform 0.3s ease-in-out;
+}
+
+.logo-icon img:hover {
+    filter: drop-shadow(0 0 10px rgba(0, 123, 255, 0.8)) 
+            drop-shadow(0 0 20px rgba(0, 123, 255, 0.6)) 
+            drop-shadow(0 0 30px rgba(0, 123, 255, 0.4));
+            transform: scale(1.1);
 }
